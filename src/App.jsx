@@ -15,8 +15,8 @@ export default function App() {
             element={<userRoute.component />}
           />
         ))} */}
-        <Route path="/" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/" element={<Signup />} /> */}
+        <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>

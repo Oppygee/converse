@@ -2,24 +2,17 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const [details, setDetails] = useState({
-    email: '',
-    password: ''
-  });
-
-  const handleForm = (e) => {
-    setDetails({ ...details, [e.target.name]: e.target.value });
-  };
-
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Retrieve the stored signup details from local storage
-    const storedDetails = JSON.parse(localStorage.getItem('userDetails'));
+    // Placeholder for authentication logic
+    const storedEmail = 'user@example.com'; // Replace with actual stored email
+    const storedPassword = 'password123'; // Replace with actual stored password
 
-    // Simple authentication check
-    if (storedDetails && storedDetails.email === details.email && storedDetails.password === details.password) {
+    if (email === storedEmail && password === storedPassword) {
       navigate('/dashboard');
     } else {
       alert('Invalid credentials');
@@ -37,9 +30,8 @@ const Login = () => {
             <input
               type="email"
               className="w-full px-3 py-2 border rounded-md text-gray-900"
-              name='email'
-              onChange={handleForm}
-              value={details.email}
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
             />
           </div>
           <div className="mb-4">
@@ -47,9 +39,8 @@ const Login = () => {
             <input
               type="password"
               className="w-full px-3 py-2 border rounded-md text-gray-900"
-              name='password'
-              onChange={handleForm}
-              value={details.password}
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
             />
           </div>
           <button
