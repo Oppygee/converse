@@ -8,15 +8,8 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Placeholder for authentication logic
-    const storedEmail = 'user@example.com'; // Replace with actual stored email
-    const storedPassword = 'password123'; // Replace with actual stored password
-
-    if (email === storedEmail && password === storedPassword) {
-      navigate('/dashboard');
-    } else {
-      alert('Invalid credentials');
-    }
+    // Navigate to the dashboard regardless of the input
+    navigate('/dashboard');
   };
 
   return (
