@@ -12,7 +12,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchCryptoPrice = async () => {
       try {
-        const btcPrice = 58630; // Replace with real API fetch in a production application
+        const btcPrice = 65630; // Replace with real API fetch in a production application
         const initialBtcPrice = 56920; // Replace with initial price if needed
 
         const currentUsdAmount = cryptoAmount * btcPrice;
