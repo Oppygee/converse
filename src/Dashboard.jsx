@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Dashboard = () => {
   // Set initial states based on the provided details
-  const [cryptoAmount, setCryptoAmount] = useState(0.0030); // Amount in BTC
+  const [cryptoAmount, setCryptoAmount] = useState(0.0031); // Amount in BTC
   const [usdAmount, setUsdAmount] = useState(176); // Equivalent in USD
   const [appreciation, setAppreciation] = useState(3); // Appreciation in %
 
