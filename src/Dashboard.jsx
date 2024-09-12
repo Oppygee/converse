@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Dashboard = () => {
-  const [cryptoAmount, setCryptoAmount] = useState(0.00567); // Amount in BTC
+  const [cryptoAmount, setCryptoAmount] = useState(0.0096); // Amount in BTC
   const [usdAmount, setUsdAmount] = useState(); // Equivalent in USD
   const [appreciation, setAppreciation] = useState(200); // Appreciation in %
   const [showWalletAddress, setShowWalletAddress] = useState(false);
@@ -12,8 +12,8 @@ const Dashboard = () => {
     const fetchCryptoPrice = async () => {
       setIsLoading(true);
       try {
-        const btcPrice = 76080; // Fetch from real API in production
-        const initialBtcPrice = 35000;
+        const btcPrice = 54899; // Fetch from real API in production
+        const initialBtcPrice = 20000;
 
         const currentUsdAmount = cryptoAmount * btcPrice;
         const initialUsdAmount = cryptoAmount * initialBtcPrice;
